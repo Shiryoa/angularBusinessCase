@@ -1,0 +1,33 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+
+}
+
+.saisie{
+    display: flex;
+    align-content: center;
+    margin-top: 200px;
+    flex-direction: column;
+
+}
+
+/* .carre{
+        background-color: black;
+
+} */
+
+.bouton{
+    background-color: white;
+    border:black;
+    border-width: 1px;
+}
+
+button[mat-raised-button]{
+    color: #3f3f3f;
+    background-color: #80b8d9;
+    border-width: 5px;
+    border-color: #3f3f3f;
+}

@@ -1,5 +1,15 @@
-<form>
-    <input type="text" placeholder="ID" >
-    <input type="text" placeholder="password" >
-    <input type="submit" >
-</form>
+<div class="saisie">
+    <mat-form-field appearance="fill">
+        <mat-label>Identifiant</mat-label>
+        <input matInput>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Mot De Passe</mat-label>
+        <input matInput [type]="hide ? 'password' : 'text'">
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+            [attr.aria-pressed]="hide">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+    </mat-form-field>
+    <button mat-raised-button class="bouton" routerLink="dashboard">Se connecter</button>
+</div>

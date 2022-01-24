@@ -1,15 +1,17 @@
-<div class="saisie">
+<p *ngIf="connexionRatee">Identifiant incorrect</p>
+
+<form class="saisie" (ngSubmit)="validerForm()">
     <mat-form-field appearance="fill">
         <mat-label>Identifiant</mat-label>
-        <input matInput>
+        <input matInput type="email" required [(ngModel)]="email" name="email">
     </mat-form-field>
     <mat-form-field appearance="fill">
         <mat-label>Mot De Passe</mat-label>
-        <input matInput [type]="hide ? 'password' : 'text'">
-        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+        <input matInput [type]="hide ? 'password' : 'text'" type="password" required [(ngModel)]="pass" name="password">
+        <button type="button" mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
             [attr.aria-pressed]="hide">
             <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
         </button>
     </mat-form-field>
     <button mat-raised-button class="bouton" routerLink="dashboard">Se connecter</button>
-</div>
+</form>

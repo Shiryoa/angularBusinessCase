@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ConnexionComponent } from './connexion/connexion.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { DboardComponent } from './dboard/dboard.component';
 import { MonGuardGuard } from './guard/mon-guard.guard';
 
 const routes: Routes = [
   { path: "connexion", component: ConnexionComponent },
-  { path: "dashboard", component: DashboardComponent, canActivate: [MonGuardGuard] },
-  { path: "**", redirectTo: "connexion" }
+  { path: "dboard", component: DboardComponent, canActivate: [MonGuardGuard] },
+  { path: "**", redirectTo: "dboard" }
 ];
 
 @NgModule({

@@ -7,7 +7,7 @@ import { ApiLoginData } from '../models/types';
   providedIn: 'root'
 })
 export class AuthServiceService {
-  connectionned = false;
+  connectionned = true;
   public token!: string;
   constructor(private httpClient: HttpClient) { }
 
